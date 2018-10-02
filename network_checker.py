@@ -61,7 +61,12 @@ def main():
         toute autre valeur signifie un echec.
 
     """
-
+    host1="192.168.13.48.."
+    #print(host_up("192.168.42.152"))
+    if host_up(host1) == True:
+        print(host1, "est connecté")
+    else :
+        print(host1,"est deconnecté")
     return 0  # on indique que le programme s'est exécuté correctement
 
 
