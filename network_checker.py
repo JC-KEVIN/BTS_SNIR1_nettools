@@ -16,6 +16,7 @@ de compte rendu devra être généré.
 """
 
 import os
+import sys
 import subprocess
 
 # ce bloc sert à faire un code qui fonctionne même sous windows
@@ -61,7 +62,13 @@ def main():
         toute autre valeur signifie un echec.
 
     """
-    host1="192.168.13.48.."
+      # affiche le premier argument saisi
+    arg1 = None
+    if(len(sys.argv) > 0):
+        arg1 =str(sys.argv[1])
+    print(arg1)
+
+    host1=arg1
     #print(host_up("192.168.42.152"))
     if host_up(host1) == True:
         print(host1, "est connecté")
